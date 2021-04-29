@@ -1,7 +1,7 @@
 ---
 title: 協力廠商 Enrichment Leadspace 的公司設定檔
 description: 有關協力廠商 Leadspace 富集作用的一般資訊。
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,63 +9,84 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597676"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895940"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a><span data-ttu-id="2fc8c-103">使用 Leadspace 擴充公司設定檔 (預覽)</span><span class="sxs-lookup"><span data-stu-id="2fc8c-103">Enrichment of company profiles with Leadspace (preview)</span></span>
+# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a><span data-ttu-id="76bd3-103">使用 Leadspace 擴充公司設定檔 (預覽)</span><span class="sxs-lookup"><span data-stu-id="76bd3-103">Enrichment of company profiles with Leadspace (preview)</span></span>
 
-<span data-ttu-id="2fc8c-104">Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-104">Leadspace is a data science company that provides a B2B Customer Data Platform.</span></span> <span data-ttu-id="2fc8c-105">為客戶帶來統一客戶設定檔，讓各家公司可以擴充其資料。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-105">It enables customers with unified customer profiles for companies to enrich their data.</span></span> <span data-ttu-id="2fc8c-106">富集群包括其他屬性如公司大小、地點、產業及其他。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-106">Enrichments include additional attributes such as company size, location, industry, and more.</span></span>
+<span data-ttu-id="76bd3-104">Leadspace 是一家提供 B2B 客戶資料平台的資料科學公司。</span><span class="sxs-lookup"><span data-stu-id="76bd3-104">Leadspace is a data science company that provides a B2B Customer Data Platform.</span></span> <span data-ttu-id="76bd3-105">為客戶帶來統一客戶設定檔，讓各家公司可以擴充其資料。</span><span class="sxs-lookup"><span data-stu-id="76bd3-105">It enables customers with unified customer profiles for companies to enrich their data.</span></span> <span data-ttu-id="76bd3-106">擴充包括更多屬性，例如公司規模、位置、產業等等。</span><span class="sxs-lookup"><span data-stu-id="76bd3-106">Enrichments include more attributes such as company size, location, industry, and more.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="2fc8c-107">先決條件</span><span class="sxs-lookup"><span data-stu-id="2fc8c-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="76bd3-107">先決條件</span><span class="sxs-lookup"><span data-stu-id="76bd3-107">Prerequisites</span></span>
 
-<span data-ttu-id="2fc8c-108">若要設定 Leadspace，必須符合以下先決條件：</span><span class="sxs-lookup"><span data-stu-id="2fc8c-108">To configure Leadspace, the following prerequisites must be met:</span></span>
+<span data-ttu-id="76bd3-108">若要設定 Leadspace，必須符合以下先決條件：</span><span class="sxs-lookup"><span data-stu-id="76bd3-108">To configure Leadspace, the following prerequisites must be met:</span></span>
 
-- <span data-ttu-id="2fc8c-109">您具備有效的 Leadspace 授權和「永久金鑰」 (以下簡稱 **Leadspace 權杖**)。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-109">You have an active Leadspace license and the “perpetual key” (referred to as **Leadspace token**).</span></span> <span data-ttu-id="2fc8c-110">直接連絡 [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/)，以取得其產品的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-110">Contact directly [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) for details about their product.</span></span>
-- <span data-ttu-id="2fc8c-111">您擁有 [系統管理員](permissions.md#administrator) 權限。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-111">You have [Administrator](permissions.md#administrator) permissions.</span></span>
-- <span data-ttu-id="2fc8c-112">您有公司的[統一客戶設定檔](customer-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-112">You have [unified customer profiles](customer-profiles.md) for companies.</span></span>
+- <span data-ttu-id="76bd3-109">您有一個有效的 Leadspace 授權。</span><span class="sxs-lookup"><span data-stu-id="76bd3-109">You have an active Leadspace license.</span></span>
+- <span data-ttu-id="76bd3-110">您有公司的[統一客戶設定檔](customer-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="76bd3-110">You have [unified customer profiles](customer-profiles.md) for companies.</span></span>
+- <span data-ttu-id="76bd3-111">Leadspace 連接已由系統管理員設定，或者您有 [系統管理員](permissions.md#administrator)權限和「永久金鑰」(被稱為 **Leadspace 權杖**)。</span><span class="sxs-lookup"><span data-stu-id="76bd3-111">A Leadspace connection has already been configured by an administrator or you have [administrator](permissions.md#administrator) permissions and the “perpetual key” (referred to as **Leadspace token**).</span></span> <span data-ttu-id="76bd3-112">如需產品的詳細資料，請直接聯繫 [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/)。</span><span class="sxs-lookup"><span data-stu-id="76bd3-112">Contact [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) directly for details about their product.</span></span>
 
-## <a name="configuration"></a><span data-ttu-id="2fc8c-113">組態</span><span class="sxs-lookup"><span data-stu-id="2fc8c-113">Configuration</span></span>
+## <a name="configure-the-enrichment"></a><span data-ttu-id="76bd3-113">擴充設定</span><span class="sxs-lookup"><span data-stu-id="76bd3-113">Configure the enrichment</span></span>
 
-1. <span data-ttu-id="2fc8c-114">請在對象見解中前往 **資料** > **富集**。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-114">In audience insights, go to **Data** > **Enrichment**.</span></span>
+1. <span data-ttu-id="76bd3-114">請在對象見解中前往 **資料** > **富集**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-114">In audience insights, go to **Data** > **Enrichment**.</span></span>
 
-1. <span data-ttu-id="2fc8c-115">選取 Leadspace 圖標上的 **擴充我的資料**。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-115">Select **Enrich my data** on the Leadspace tile.</span></span>
+1. <span data-ttu-id="76bd3-115">在 Leadspace 圖格上選取 **擴充我的資料**，然後選取 **開始使用**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-115">Select **Enrich my data** on the Leadspace tile and select **Get started**.</span></span>
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace 圖格的螢幕擷取畫面。":::
 
-1. <span data-ttu-id="2fc8c-117">選取 **開始使用** 然後輸入有效的 **Leadspace 權杖** (永久金鑰)。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-117">Select **Get Started** and then enter an active **Leadspace token** (perpetual key).</span></span> <span data-ttu-id="2fc8c-118">選取 **我同意** 核取方塊，以檢閱 **資料隱私權和合規性** 並表示同意。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-118">Review and provide your consent for **Data privacy and compliance** by selecting the **I agree** checkbox.</span></span> <span data-ttu-id="2fc8c-119">選取 **連接到 Leadspace** 確認這兩項輸入資料。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-119">Confirm both inputs by selecting **Connect to Leadspace**.</span></span>
+1. <span data-ttu-id="76bd3-117">在下拉式清單中選取一個[連接](connections.md)。</span><span class="sxs-lookup"><span data-stu-id="76bd3-117">Select a [connection](connections.md) from the drop-down.</span></span> <span data-ttu-id="76bd3-118">如果沒有可用的連接，請與系統管理員聯繫。</span><span class="sxs-lookup"><span data-stu-id="76bd3-118">Contact an administrator if no connection is available.</span></span> <span data-ttu-id="76bd3-119">如果您是系統管理員，則可以選取 **新增連接** 接著選擇 **Leadspace** 來建立連接。</span><span class="sxs-lookup"><span data-stu-id="76bd3-119">If you are an administrator, you can create a connection by selecting **Add connection** and choosing **Leadspace**.</span></span> 
 
-1. <span data-ttu-id="2fc8c-120">選取 **對應資料**，然後選擇要用 Leadspace 中的公司資料擴充的資料集。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-120">Select **Map data** and choose the data set you want to enrich with company data from Leadspace.</span></span> <span data-ttu-id="2fc8c-121">您可以選取 *客戶* 實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-121">You can select the *Customer* entity to enrich all your customer profiles or select a segment entity to enrich only customer profiles contained in that segment.</span></span>
+1. <span data-ttu-id="76bd3-120">選取 **連接至 Leadspace** 以確認選取連接。</span><span class="sxs-lookup"><span data-stu-id="76bd3-120">Select **Connect to Leadspace** to confirm the connection.</span></span>
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="選擇客戶設定檔與客戶細分擴充。":::
+1. <span data-ttu-id="76bd3-121">選取 **下一步**，然後選擇想要用 Leadspace 的公司資料擴充的 **客戶資料集**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-121">Select **Next** and choose the **Customer data set** you want to enrich with company data from Leadspace.</span></span> <span data-ttu-id="76bd3-122">您可以選取 **客戶** 實體來擴充所有的客戶設定檔，或選取客戶細分實體僅擴充位於該客戶細分的客戶設定檔。</span><span class="sxs-lookup"><span data-stu-id="76bd3-122">You can select the **Customer** entity to enrich all your customer profiles or select a segment entity to enrich only customer profiles contained in that segment.</span></span>
 
-1. <span data-ttu-id="2fc8c-123">點擊 **下一步** 然後定義在統一設定檔中應使用的欄位，以便在 Leadspace 依此欄位尋找相符的公司資料。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-123">Click **Next** and define which fields from your unified profiles should be used to look for matching company data from Leadspace.</span></span> <span data-ttu-id="2fc8c-124">**公司名稱** 欄位是必要欄位。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-124">The **Name of company** field is required.</span></span> <span data-ttu-id="2fc8c-125">為了獲得更高的準確性，可以新增多達兩個欄位，**公司網站** 和 **公司位置**。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-125">For a higher match accuracy, up to two other fields, **Company website** and **Company location**, can be added.</span></span>
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="選擇客戶資料集的螢幕擷取畫面。":::
+
+1. <span data-ttu-id="76bd3-124">選取 **下一步**，接著定義在整合個人資料中的欄位，這些欄位用來在 Leadspace 尋找符合的公司資料。</span><span class="sxs-lookup"><span data-stu-id="76bd3-124">Select **Next** and define which fields from your unified profiles are used to look for matching company data from Leadspace.</span></span> <span data-ttu-id="76bd3-125">**公司名稱** 欄位是必要欄位。</span><span class="sxs-lookup"><span data-stu-id="76bd3-125">The **Name of company** field is required.</span></span> <span data-ttu-id="76bd3-126">為了獲得更高的準確性，可以新增多達兩個欄位，**公司網站** 和 **公司位置**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-126">For a higher match accuracy, up to two other fields, **Company website** and **Company location**, can be added.</span></span>
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace 欄位對應窗格。":::
+
+1. <span data-ttu-id="76bd3-128">請選取 **下一步**，完成欄位對應。</span><span class="sxs-lookup"><span data-stu-id="76bd3-128">Select **Next** to complete the field mapping.</span></span>
+
+1. <span data-ttu-id="76bd3-129">提供擴充的名稱，並在檢閱選擇後選取 **儲存擴充**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-129">Provide a name for the enrichment and select **Save enrichment** after reviewing your choices.</span></span>
+
+
+## <a name="configure-the-connection-for-leadspace"></a><span data-ttu-id="76bd3-130">設定 Leadspace 的連接</span><span class="sxs-lookup"><span data-stu-id="76bd3-130">Configure the connection for Leadspace</span></span> 
+
+<span data-ttu-id="76bd3-131">您必須是系統管理員才能設定連接。</span><span class="sxs-lookup"><span data-stu-id="76bd3-131">You need to be an administrator to configure connections.</span></span> <span data-ttu-id="76bd3-132">在設定擴充時，請選取 \**新增連接\*\*\*或* 在 Leadspace 圖格上移至 **管理** > **連接** 並選取 **設定**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-132">Select **Add connection** when configuring an enrichment *or* go to **Admin** > **Connections** and select **Set up** on the Leadspace tile.</span></span>
+
+1. <span data-ttu-id="76bd3-133">選取 **開始使用**</span><span class="sxs-lookup"><span data-stu-id="76bd3-133">Select **Get Started**</span></span> 
+
+1. <span data-ttu-id="76bd3-134">在 **顯示名稱** 方塊中輸入連接的名稱。</span><span class="sxs-lookup"><span data-stu-id="76bd3-134">Enter a name for the connection in the **Display name** box.</span></span>
+
+1. <span data-ttu-id="76bd3-135">提供有效的 Leadspace 權杖。</span><span class="sxs-lookup"><span data-stu-id="76bd3-135">Provide a valid Leadspace token.</span></span>
+
+1. <span data-ttu-id="76bd3-136">檢閱 **資料隱私權和合規性** 並選取 **我同意** 的核取方塊，表示同意</span><span class="sxs-lookup"><span data-stu-id="76bd3-136">Review and provide your consent for **Data privacy and compliance** by selecting the **I agree** checkbox</span></span>
+
+1. <span data-ttu-id="76bd3-137">選取 **驗證** 來驗證設定。</span><span class="sxs-lookup"><span data-stu-id="76bd3-137">Select **Verify** to validate the configuration.</span></span>
+
+1. <span data-ttu-id="76bd3-138">完成驗證之後，請選取 **儲存**。</span><span class="sxs-lookup"><span data-stu-id="76bd3-138">After completing the verification, select **Save**.</span></span>
    
-1. <span data-ttu-id="2fc8c-127">選取 **套用** 完成欄位對應。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-127">Select **Apply** to complete the field mapping.</span></span>
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace 的連接設定頁面。":::
 
-1. <span data-ttu-id="2fc8c-128">選取 **執行** 以擴充公司設定檔。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-128">Select **Run** to enrich the company profiles.</span></span> <span data-ttu-id="2fc8c-129">富集花費的時間視統一的客戶設定檔數量而定。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-129">How long an enrichment takes depends on the number of unified customer profiles.</span></span>
+## <a name="enrichment-results"></a><span data-ttu-id="76bd3-140">擴充結果</span><span class="sxs-lookup"><span data-stu-id="76bd3-140">Enrichment results</span></span>
 
-## <a name="enrichment-results"></a><span data-ttu-id="2fc8c-130">擴充結果</span><span class="sxs-lookup"><span data-stu-id="2fc8c-130">Enrichment results</span></span>
+<span data-ttu-id="76bd3-141">重新整理擴充內容之後，您可以在[我的擴充內容](enrichment-hub.md)中檢閱新近擴充的公司資料。</span><span class="sxs-lookup"><span data-stu-id="76bd3-141">After refreshing the enrichment, you can review the newly enriched company data under [My enrichments](enrichment-hub.md).</span></span> <span data-ttu-id="76bd3-142">您可以找到上次更新的時間以及已擴充設定檔的數目。</span><span class="sxs-lookup"><span data-stu-id="76bd3-142">You can find the time of the last update and the number of enriched profiles.</span></span>
 
-<span data-ttu-id="2fc8c-131">重新整理擴充內容之後，您可以在[我的擴充內容](enrichment-hub.md)中檢閱新近擴充的公司資料。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-131">After refreshing the enrichment, you can review the newly enriched company data under [My enrichments](enrichment-hub.md).</span></span> <span data-ttu-id="2fc8c-132">您可以找到上次更新的時間以及已擴充設定檔的數目。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-132">You can find the time of the last update and the number of enriched profiles.</span></span>
+<span data-ttu-id="76bd3-143">您可以選取 **檢視擴充的資料** 來存取每個已擴充設定檔的詳細檢視表。</span><span class="sxs-lookup"><span data-stu-id="76bd3-143">You can access a detailed view of each enriched profile by selecting **View enriched data**.</span></span>
 
-<span data-ttu-id="2fc8c-133">您可以選取 **檢視擴充的資料** 來存取每個已擴充設定檔的詳細檢視表。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-133">You can access a detailed view of each enriched profile by selecting **View enriched data**.</span></span>
+<span data-ttu-id="76bd3-144">如需詳細資訊，請參閱 [Leadspace API](https://support.leadspace.com/hc/en-us/sections/201997649-API)。</span><span class="sxs-lookup"><span data-stu-id="76bd3-144">For more information, see [Leadspace APIs](https://support.leadspace.com/hc/en-us/sections/201997649-API).</span></span>
 
-<span data-ttu-id="2fc8c-134">如需詳細資訊，請參閱 [Leadspace API](https://support.leadspace.com/hc/en-us/sections/201997649-API)。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-134">For more information, see [Leadspace APIs](https://support.leadspace.com/hc/en-us/sections/201997649-API).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="76bd3-145">後續步驟</span><span class="sxs-lookup"><span data-stu-id="76bd3-145">Next steps</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="2fc8c-135">後續步驟</span><span class="sxs-lookup"><span data-stu-id="2fc8c-135">Next steps</span></span>
+<span data-ttu-id="76bd3-146">建立在您擴充的客戶資料之上。</span><span class="sxs-lookup"><span data-stu-id="76bd3-146">Build on top of your enriched customer data.</span></span> <span data-ttu-id="76bd3-147">建立[客戶細分](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。</span><span class="sxs-lookup"><span data-stu-id="76bd3-147">Create [segments](segments.md), [measures](measures.md), and even [export the data](export-destinations.md) to deliver personalized experiences to your customers.</span></span>
 
-<span data-ttu-id="2fc8c-136">建立在您擴充的客戶資料之上。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-136">Build on top of your enriched customer data.</span></span> <span data-ttu-id="2fc8c-137">建立[客戶細分](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-137">Create [segments](segments.md), [measures](measures.md), and even [export the data](export-destinations.md) to deliver personalized experiences to your customers.</span></span>
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="76bd3-148">資料隱私權與合規性</span><span class="sxs-lookup"><span data-stu-id="76bd3-148">Data privacy and compliance</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="2fc8c-138">資料隱私權與合規性</span><span class="sxs-lookup"><span data-stu-id="2fc8c-138">Data privacy and compliance</span></span>
-
-<span data-ttu-id="2fc8c-139">當您啟用 Dynamics 365 Customer Insights 將資料傳輸給 Leadspace 時，您允許在合規性邊界之外傳輸 Dynamics 365 Customer Insights 資料，包括潛在敏感性資料如個人資料。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-139">When you enable Dynamics 365 Customer Insights to transmit data to Leadspace, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="2fc8c-140">Microsoft 將依據您的指示傳輸此資料，但您須負責確保 Leadspace 符合您可能應盡的任何隱私權或資訊安全義務。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Leadspace meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="2fc8c-141">如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="2fc8c-142">您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。</span><span class="sxs-lookup"><span data-stu-id="2fc8c-142">Your Dynamics 365 Customer Insights Administrator can remove this enrichment at any time to discontinue use of this functionality.</span></span>
+<span data-ttu-id="76bd3-149">當您啟用 Dynamics 365 Customer Insights 將資料傳輸給 Leadspace 時，您允許在合規性邊界之外傳輸 Dynamics 365 Customer Insights 資料，包括潛在敏感性資料如個人資料。</span><span class="sxs-lookup"><span data-stu-id="76bd3-149">When you enable Dynamics 365 Customer Insights to transmit data to Leadspace, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="76bd3-150">Microsoft 將依據您的指示傳輸此資料，但您須負責確保 Leadspace 符合您可能應盡的任何隱私權或資訊安全義務。</span><span class="sxs-lookup"><span data-stu-id="76bd3-150">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Leadspace meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="76bd3-151">如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=396732)。</span><span class="sxs-lookup"><span data-stu-id="76bd3-151">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="76bd3-152">您的 Dynamics 365 Customer Insights 系統管理員可以隨時移除此富集作用，以便不再繼續使用此功能。</span><span class="sxs-lookup"><span data-stu-id="76bd3-152">Your Dynamics 365 Customer Insights Administrator can remove this enrichment at any time to discontinue use of this functionality.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
