@@ -3,26 +3,29 @@ title: 產品建議預測範例指南
 description: 使用此範例指南嘗試立即可用的產品建議預測模型。
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129926"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354674"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>產品建議預測 (預覽版) 範例指南
+# <a name="product-recommendation-prediction-sample-guide"></a>產品建議預測範例指南
 
 我們將使用的下方範例資料，逐步介紹完整的產品建議預測範例。
 
 ## <a name="scenario"></a>案例
 
-Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Contoso 咖啡網站進行銷售。 他們的目標是瞭解他們應該建議哪些產品給他們的重複客戶。 知道客戶 **很可能購買** 哪些產品，可協助他們專注在特定項目並精簡行銷工作。
+Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖啡網站銷售。 他們的目標是瞭解他們應該建議哪些產品給他們的重複客戶。 知道客戶 **很可能購買** 哪些產品，可協助他們專注在特定項目並精簡行銷工作。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -31,7 +34,7 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
 ## <a name="task-1---ingest-data"></a>任務 1 - 內嵌資料
 
-具體回顧這些文章 [關於資料內嵌](data-sources.md) 和 [使用 Power Query 連接器匯入資料來源](connect-power-query.md)。 下列資訊假定您大體上已熟悉內嵌資料。
+請特別檢閱關於[資料擷取](data-sources.md)和[使用 Power Query 連接器匯入資料來源](connect-power-query.md)的文章。 下列資訊假定您大體上已熟悉內嵌資料。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>從電子商務平台內嵌客戶資料
 
@@ -101,13 +104,13 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
    ![統整 LoyaltyId 為主鍵。](media/unify-loyaltyid.png)
 
-### <a name="match"></a>相符項目
+### <a name="match"></a>比對
 
 1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
 
-2. 請在 **主要** 下拉式清單中選擇 **eCommerceContacts：電子商務** 為主要來源並包括所有記錄。
+2. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
 
-3. 請在 **實體 2** 下拉式清單中選擇 **loyCustomers：LoyaltyScheme** 並包括所有記錄。
+3. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
 
    ![統整比對電子商務與忠誠度。](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Contoso 是生產高品質咖啡和咖啡機的一家公司，並透過其 Conto
 
 5. 使用 FullName 新增您的第一個條件。
 
-   - eCommerceContacts 方面，請在下拉式清單中選取 **FullName**。
-   - loyCustomers 方面，請在下拉式清單中選取 **FullName**。
+   - 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
+   - 在 loyCustomers，請在下拉式清單中選擇 **全名**。
    - 選取 **正規化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 
 6. 輸入新規則名稱 **FullName、電子郵件**。
 
    - 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   - 實體 eCommerceContacts 方面，請在下拉式清單中選擇 **電子郵件**。
-   - 實體 loyCustomers 方面，請在下拉式清單中選擇 **電子郵件**。
+   - 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
+   - 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。
    - 保留正規化空白。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 
