@@ -3,17 +3,18 @@ title: Microsoft Teams 機器人
 description: 請借助機器人在 Microsoft Teams 中查閱統一的客戶設定檔。
 ms.date: 10/08/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232129"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967846"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Dynamics 365 Customer Insights 團隊機器人 (預覽版)
 

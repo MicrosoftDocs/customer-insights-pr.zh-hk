@@ -2,25 +2,19 @@
 title: 對象見解中的系統組態
 description: 瞭解 Dynamics 365 Customer Insights 對象見解能力中的系統設定。
 ms.date: 11/01/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-system-status
-- ci-system-schedule
-- ci-system-about
-- ci-system-general
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354260"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732397"
 ---
 # <a name="system-configuration"></a>系統設定
 
@@ -91,10 +85,6 @@ ms.locfileid: "8354260"
 ## <a name="schedule-tab"></a>排程索引標籤
 
 使用 **排程** 索引標籤排程您的所有 [內嵌資料來源](data-sources.md) 的自動重新整理。 自動重新整理可協助確保資料來源更新會反映在您的統一客戶設定檔中。
-
-> [!NOTE]
-> 您管理的資料來源會依自己的排程來重新整理。 若要對您管理的資料來源排程重新整理，請從該特定資料來源的 **資料來源** 頁面設定重新整理。
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform資料流程重新整理設定。":::
 
 1. 請在觀眾見解中前往 **管理員**  > **系統** 並選取 **排程** 索引標籤。
 

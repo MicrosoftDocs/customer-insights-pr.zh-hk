@@ -1,26 +1,24 @@
 ---
 title: 建立和管理環境
 description: 瞭解如何註冊服務及管理環境。
-ms.date: 12/06/2021
+ms.date: 10/14/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-searchScope:
-- ci-system-about
-- customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354306"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673771"
 ---
 # <a name="manage-environments"></a>管理環境
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 ## <a name="switch-environments"></a>切換環境
 
@@ -41,22 +39,6 @@ ms.locfileid: "8354306"
 3. 您可以在 **編輯環境** 方塊中更新環境設定。
 
 如需環境設定的詳細資訊，請參閱[建立新環境](create-environment.md)。
-
-## <a name="connect-to-microsoft-dataverse"></a>連線至 Microsoft Dataverse
-   
-**Microsoft Dataverse** 步驟讓您連接 Customer Insights 和您的 Dataverse 環境。
-
-若要使用[開箱即用預測模型](predictions-overview.md#out-of-box-models)，請組態與 Dataverse 共用的資料。 或者您可以從內部部署資料來源擷取，提供貴組織管理的 Microsoft Dataverse 環境 URL。
-
-> [!IMPORTANT]
-> Customer Insights 與 Dataverse 必須位於相同的地區，才能啟用資料共用。
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="啟用與 Microsoft Dataverse 共用資料的設定選項。":::
-
-> [!NOTE]
-> Customer Insights 不支援的資料共用案例如下：
-> - 如果您儲存所有資料到 Azure Data Lake Storage，您就不能啟用與 Dataverse 託管的資料湖共用資料的功能。
-> - 如果您啟用與 Dataverse 共享資料的功能，您就無法[在實體建立預測或遺漏的數值](predictions.md)。
 
 ## <a name="copy-the-environment-configuration"></a>複製環境設定
 

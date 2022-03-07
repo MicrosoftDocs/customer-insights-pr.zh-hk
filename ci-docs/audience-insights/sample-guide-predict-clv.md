@@ -3,17 +3,18 @@ title: 客戶存留期值預測範例指南
 description: 您可以依循此範例指南來嘗試客戶存留期值預測的模型。
 ms.date: 05/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354858"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129972"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>客戶存留期值 (CLV) 預測範例指南
 
@@ -21,7 +22,7 @@ ms.locfileid: "8354858"
 
 ## <a name="scenario"></a>案例
 
-Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso Coffee 網站銷售產品。 公司想要了解他們的客戶在未來 12 個月所能生成的價值 (營收)。 知道客戶在接下來的 12 個月中的預期價值，將可讓他們將行銷活動導向價值最高的客戶。
+Contoso 是一家生產高品質咖啡和咖啡機的公司。 他們透過 Contoso 咖啡網站銷售產品。 公司想要了解他們的客戶在未來 12 個月所能生成的價值 (營收)。 知道客戶在接下來的 12 個月中的預期價值，將可讓他們將行銷活動導向價值最高的客戶。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -30,7 +31,7 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 ## <a name="task-1---ingest-data"></a>任務 1 - 內嵌資料
 
-檢閱關於[資料擷取](data-sources.md)和[使用 Power Query 連接器匯入資料來源](connect-power-query.md)的文章。 下列資訊假定您大體上已熟悉內嵌資料。
+請查看文章：[關於資料擷取](data-sources.md)和 [使用 Power Query 連接器匯入資料來源](connect-power-query.md)。 下列資訊假定您大體上已熟悉內嵌資料。
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>從電子商務平台內嵌客戶資料
 
@@ -122,9 +123,9 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
 
-1. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
+1. 請在 **主要** 下拉式清單中選擇 **eCommerceContacts：電子商務** 為主要來源並包括所有記錄。
 
-1. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
+1. 請在 **實體 2** 下拉式清單中選擇 **loyCustomers：LoyaltyScheme** 並包括所有記錄。
 
    ![統整比對電子商務與忠誠度。](media/unify-match-order.png)
 
@@ -132,16 +133,16 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 1. 使用 FullName 新增您的第一個條件。
 
-   - 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
-   - 在 loyCustomers，請在下拉式清單中選擇 **全名**。
-   - 選取 **標準化** 下拉式功能表，然後選擇 **類型 (電話、名稱、地址、...)**。
+   - eCommerceContacts 方面，請在下拉式清單中選取 **FullName**。
+   - loyCustomers 方面，請在下拉式清單中選取 **FullName**。
+   - 選取 **標準化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 
 1. 輸入新規則名稱 **FullName、電子郵件**。
 
    - 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   - 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
-   - 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。
+   - 實體 eCommerceContacts 方面，請在下拉式清單中選擇 **電子郵件**。
+   - 實體 loyCustomers 方面，請在下拉式清單中選擇 **電子郵件**。
    - 保留正規化空白。
    - 設定 **精密等級**：**基本** 與 **值**：**高**。
 
@@ -163,7 +164,7 @@ Contoso 是一家公司，生產高品質的咖啡及咖啡機。 透過 Contoso
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>工作 3 - 設定客戶存留期值預測
 
-透過整合客戶個人資料，我們現在可以執行客戶存留期值預測。 如需詳細步驟，請參閱 [客戶存留期值預測](predict-customer-lifetime-value.md)。
+透過整合客戶個人資料，我們現在可以執行客戶存留期值預測。 如需詳細步驟，請參閱 [客戶存留期值預測 (預覽版)](predict-customer-lifetime-value.md)。
 
 1. 移至 **智慧**  > **預測**，然後選取 **客戶存留期值模型**。
 

@@ -3,17 +3,18 @@ title: 使用 Azure 地圖服務的位置資料擴充客戶個人資料
 description: 關於 Azure 地圖服務第一方企業擴充的一般資訊。
 ms.date: 08/31/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226476"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466789"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>使用 Azure 地圖服務擴充客戶個人資料 (預覽版)
 
@@ -85,7 +86,7 @@ Azure 地圖服務提供以位置為中心的資料和服務，利用內建位�
 
 ## <a name="next-steps"></a>後續步驟
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+建立在您擴充的客戶資料之上。 建立[客戶細分](segments.md)、[量值](measures.md)，甚至[匯出資料](export-destinations.md)，以便傳送個人化體驗給您的客戶。
 
 ## <a name="data-privacy-and-compliance"></a>資料隱私權與合規性
 

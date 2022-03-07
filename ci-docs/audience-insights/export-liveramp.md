@@ -1,19 +1,20 @@
 ---
-title: LiveRamp 連接器
+title: LiveRamp  連接器
 description: 了解如何設定連接並匯出至 LiveRamp。
-ms.date: 10/08/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226379"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555472"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>將客戶細分匯出至 LiveRamp&reg; (預覽版)
 
@@ -57,7 +58,7 @@ ms.locfileid: "8226379"
    > [!div class="mx-imgBorder"]
    > ![LiveRamp 連接器與屬性對應。](media/export-liveramp-segments.png "LiveRamp 連接器與屬性對應")
 
-1. 從您的 *客戶* 實體對應選取金鑰識別碼的屬性。
+1. 從您的統一客戶實體中對應所選金鑰識別元的相應屬性。
 
 1. 選取 **新增屬性** 對應更多屬性，以傳送至 LiveRamp。
 

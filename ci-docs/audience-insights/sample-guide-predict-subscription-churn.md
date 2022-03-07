@@ -2,23 +2,21 @@
 title: 訂閱流失預測範例指南
 description: 使用此範例指南試用訂閱流失創意預測模型。
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: wameng
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-create-prediction
-- customerInsights
-ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355640"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269885"
 ---
-# <a name="subscription-churn-prediction-sample-guide"></a>訂閱流失預測範例指南
+# <a name="subscription-churn-prediction-preview-sample-guide"></a>訂閱流失預測 (預覽版) 範例指南
 
 我們將以訂閱流失預測範例使用的下方範例資料從頭到尾向您說明。 
 
@@ -33,7 +31,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 ## <a name="task-1---ingest-data"></a>任務 1 - 內嵌資料
 
-請特別檢閱關於[資料擷取](data-sources.md)和[使用 Power Query 連接器匯入資料來源](connect-power-query.md)的文章。 下列資訊假定您大體上已熟悉內嵌資料。 
+具體回顧這些文章 [關於資料內嵌](data-sources.md) 和 [使用 Power Query 連接器匯入資料來源](connect-power-query.md)。 下列資訊假定您大體上已熟悉內嵌資料。 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>從電子商務平台內嵌客戶資料
 
@@ -126,13 +124,13 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="統整 LoyaltyId 為主鍵。":::
 
-### <a name="match"></a>比對
+### <a name="match"></a>相符項目
 
 1. 請前往 **比對** 索引標籤並選取 **設定訂單**。
 
-1. 在 **主要** 下拉式清單中，選擇 **eCommerceContacts : eCommerce** 作為主要來源，並包含所有記錄。
+1. 請在 **主要** 下拉式清單中選擇 **eCommerceContacts：電子商務** 為主要來源並包括所有記錄。
 
-1. 在 **實體 2** 下拉清單中，選擇 **loyCustomers : LoyaltyScheme** 並包含所有記錄。
+1. 請在 **實體 2** 下拉式清單中選擇 **loyCustomers：LoyaltyScheme** 並包括所有記錄。
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="統整比對電子商務與忠誠度。":::
 
@@ -140,16 +138,16 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 1. 使用 FullName 新增您的第一個條件。
 
-   * 在 eCommerceContacts ，請在下拉式清單中選擇 **全名**。
-   * 在 loyCustomers，請在下拉式清單中選擇 **全名**。
+   * eCommerceContacts 方面，請在下拉式清單中選取 **FullName**。
+   * loyCustomers 方面，請在下拉式清單中選取 **FullName**。
    * 選取 **正規化** 下拉式清單並選擇 **類型 (電話、名稱、地址、...)**。
    * 設定 **精密等級**：**基本** 與 **值**：**高**。
 
 1. 輸入新規則名稱 **FullName、電子郵件**。
 
    * 選取 **新增條件** 來新增電子郵件地址的第二個條件
-   * 在 eCommerceContacts 實體，請在下拉式清單中選擇 **電子郵件**。
-   * 在loyCustomers 實體，請在下拉式清單中選擇 **電子郵件**。 
+   * 實體 eCommerceContacts 方面，請在下拉式清單中選擇 **電子郵件**。
+   * 實體 loyCustomers 方面，請在下拉式清單中選擇 **電子郵件**。 
    * 保留正規化空白。 
    * 設定 **精密等級**：**基本** 與 **值**：**高**。
 
@@ -170,7 +168,7 @@ Contoso 是一家公司，生產高品質咖啡和咖啡機，透過 Contoso 咖
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>任務 3 - 組態訂閱流失預測
 
-現在我們可以使用統整的客戶設定檔執行訂閱流失預測。 如需詳細步驟，請參閱[訂閱流失預測](predict-subscription-churn.md)的文章。 
+現在我們可以使用統整的客戶設定檔執行訂閱流失預測。 如需詳細步驟，請見 [訂閱流失預測 (預覽版)](predict-subscription-churn.md) 文章。 
 
 1. 前往 **智慧** > **發現** 並選取使用 **客戶流失模型**。
 
