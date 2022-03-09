@@ -3,18 +3,21 @@ title: 使用 Microsoft 的資料擴充客戶個人資料
 description: 使用 Microsoft 的專有資料，以品牌親和力和聲量佔有率擴充您的客戶資料。
 ms.date: 11/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+searchScope:
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 77972475c9a448186cee3b1b62eeda7b1996edfc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7793730"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355364"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>使用品牌親和度和聲量佔有率 (預覽版) 來擴充客戶個人資料
 

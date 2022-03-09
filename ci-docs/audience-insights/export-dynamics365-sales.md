@@ -3,24 +3,31 @@ title: 匯出 Customer Insights 資料到 Dynamics 365 Sales
 description: 了解如何設定連接並匯出至 Dynamics 365 Sales。
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 78abb6699c6af5258fe7de1bf6aa4cb943796af1
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046406"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355056"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>在 Dynamics 365 Sales 中使用客戶細分 (預覽版)
 
 
 
 使用您的客戶資料來建立行銷名單、追蹤工作流程，並透過 Dynamics 365 Sales 寄出促銷活動。
+
+## <a name="known-limitations"></a>已知限制
+
+- 匯出至 Dynamics 365 Sales 的每個客戶細分限制為 100'000 個成員。
+- 客戶細分匯出至 Dynamics 365 Sales 最多可能需要 3 小時的時間才能完成。 
 
 ## <a name="prerequisite-for-connection"></a>連接的先決條件
 

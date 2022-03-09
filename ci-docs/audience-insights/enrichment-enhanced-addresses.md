@@ -3,18 +3,23 @@ title: 地址增強擴充 (包括影片)
 description: 使用 Microsoft 模型擴充和標準化客戶個人資料的地址資訊。
 ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010936"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353663"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>以增強的地址擴充的客戶個人資料
 

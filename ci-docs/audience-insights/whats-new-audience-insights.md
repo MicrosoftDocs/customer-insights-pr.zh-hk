@@ -1,31 +1,155 @@
 ---
 title: 新功能以及近期即將推出的功能
 description: 關於新功能、改善和 BUG 修正的資訊。
-ms.date: 07/19/2021
-ms.service: customer-insights
+ms.date: 03/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692416"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232731"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights 的觀象見解能力有什麼新發表的功能
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 我們很高興宣布我們最新的更新！ 本文摘要說明公開預覽功能、正式發行增強功能以及功能更新。 若要查看長期功能計劃，請參閱 [Dynamics 365 和 Power Platform 發行計劃](/dynamics365/release-plans/)。
 
 我們會逐一在各地區推出更新。 因此可能會在特定地區提前看到其他地區尚未推出的功能。 除非另有指示，您不需要採取任何動作，我們會在不停機的情況下自動更新應用程式。
 
 > [!TIP]
-> 若要送出和票選功能要求和產品建議，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+> 若要提出功能要求和產品建議並票選，請前往 [Dynamics 365 應用程式想法入口網站](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights)。
+
+
+## <a name="january-2022-updates"></a>2022 年 1 月更新
+
+2022 年 1 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>在您的客戶意見反應上的情感分析
+
+Customer Insights 提供新的 AI 支援功能，可綜合客戶情感並找出特定的業務層面，當作有目標的增進機會。 透過分析您的客戶意見反應，就可以用較低的成本取得準確的深入解析。 由自然語言處理 (NLP) 模型所支援的情感分析，為每個客戶識別碼生成兩個衍生見解。 情感分數 (-5 到 5) 和可適用的業務層面清單。 
+
+如需詳細資訊，請參閱[分析在客戶意見反應中的情感 (預覽版)](sentiment-analysis.md)。
+
+
+## <a name="december-2021-updates"></a>2021 年 12 月更新
+
+2021 年 12 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>將 Customer Insights 日誌轉寄至 Azure 監視器
+
+Customer Insights 提供與 Azure 監視器的直接整合。 此功能包括稽核事件和作業事件。 Azure 監視器資源記錄可讓您監控並把記錄傳送至 Azure 儲存體、Azure Log Analytics，或將它們串流至 Azure 事件中樞。
+
+如需詳細資訊，請參閱[使用 Azure 監視器在 Dynamics 365 Customer Insights 中進行日誌轉發 (預覽版)](diagnostics.md)。
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>使用參與度資料擴充客戶個人資料
+
+使用 Microsoft Office 365 中的資料，經由 Office 365 應用程式以參與度的見解來擴充客戶個人資料。 參與度由電子郵件和會議活動組成，並根據客戶等級進行彙總。 例如，來自商務客戶的電子郵件數量或與該客戶的會議數量。 不會共用個別使用者的任何資料。 此擴充功能只有在英國、歐洲和北美地區才能使用。
+
+如需詳細資訊，請參閱[使用參與度資料擴充客戶設定檔 (預覽版)](enrichment-office.md)。
+
+### <a name="advanced-data-unification-features"></a>進階資料整合功能
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>在個別屬性等級啟用衝突解決策略
+
+當在實體中重複資料刪除客戶記錄時，您可能不想要將完整記錄選為入選方。 現在我們允許您根據每個屬性的規則，從不同記錄合併最合適的欄位。 例如，您可以選擇保留最近的電子郵件，「及」來自不同記錄的最完整地址。 
+
+在單一實體中進行重複資料刪除和合併記錄時，您現在可以為各個屬性定義不同的合併規則。 以前，我們只會讓您選取單一合併規則 (根據新近度資料完整性保留記錄)，而且規則已在記錄等級套用至所有屬性。 當在記錄 A 中找到一些您要保留的資料，而且在記錄 B 中找到其他適當的資料時，過去那種方式並不理想。
+
+如需更多資訊，請見 [定義比對實體的重複資料刪除](match-entities.md#define-deduplication-on-a-match-entity)。
+
+#### <a name="custom-rules-for-matching"></a>適用比對的自訂規則
+
+有時您必須指定一般規則的例外，才能「不要」比對記錄。 當多個人員有夠多的相同資訊，系統將它們比對成單一個體時，就會發生這種現象。 例如，有相同姓氏的雙胞胎，居住在同一個市/鎮，並有著一樣的出生日期。
+
+例外會確保可以在整合規則中處理掉不正確的資料整合。 您可以將多個例外新增至規則。
+
+如需詳細資訊，請參閱[在規則中加入例外](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>提供其他衝突解決策略，並啟用屬性群組
+
+此功能可讓您將一組欄位當成單一單位處理。 例如，當我們的記錄包含欄位地址 1、地址 2、市/鎮、州/省和郵遞區號時。 想要讓我們的資料變得更加完整，我們可能不想要合併不同記錄的地址 2。
+
+您現在可以組合一組相關的欄位，並將單一合併策略套用至群組。 
+
+如需詳細資訊，請參閱[合併欄位群組](merge-entities.md#combine-a-group-of-fields)。
+
+
+## <a name="november-2021-updates"></a>2021 年 11 月更新
+
+2021 年 11 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="segment-membership-now-available-in-dataverse"></a>客戶細分成員資格現在可在 Dataverse 中使用
+
+客戶個人資料的客戶細分成員資格資訊，以及客戶個人資料和見解，現在可在 Dataverse 中使用。 Dynamics 365 動作應用程式和模型導向應用程式可以使用此資料，來查詢特定客戶的客戶細分成員資格詳細資料。
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>活動支援商務客戶連絡人層級詳細資料
+
+您現在可以設定、顯示及篩選商務客戶活動時間表中的連絡人活動，以更清楚地瞭解哪些客戶連絡人參與特定活動。
+
+## <a name="october-2021-updates"></a>2021 年 10 月更新
+
+2021 年 10 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="b-to-b"></a>B 到 B
+
+從 2021 年 10 月開始，在 Customer Insights 中您可以使用商務客戶及其相關連絡人。 在之前，應用程式大多為個人消費者量身訂做。 除了新環境類型，也已更新數個功能區域來支援 B 到 B 案例。 如需已支援的 B 到 B 功能概述，請參閱 [對象見解中的商務客戶](work-with-business-accounts.md)。
+
+下列各節重點節錄了一些關鍵區域，都已修改為可支援商務客戶和個人消費者。
+
+#### <a name="export-segments-based-on-business-accounts"></a>匯出以商務客戶建立的客戶細分
+
+在對象見解中的所有客戶細分匯出均可在商務客戶的內容上使用。 大多數的客戶細分需要額外的設定並且在基礎客戶細分有 [聯絡人資訊投影](segment-builder.md#create-a-new-segment) ，才能用於商務客戶。 如需詳細資訊，請參閱[匯出客戶細分](export-destinations.md#export-segments)。
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>使用 LinkedIn Ads 匯出商務客戶
+
+LinkedIn Ads 匯出現在可對聯絡人目標和公司目標使用商務客戶的內容。 選取公司木邀作為 LinkedIn 匯出主要焦點時，您可以匯出以商務客戶建立的客戶細分，而不需要投影連絡人資訊。 如需詳細資訊，請移至相關文件：[LinkedIn Ads 匯出 ](export-linkedin-ads.md)以及 [連絡人目標 ](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)與 [公司目標之間的區別 ](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting)。 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>根據商務客戶及其階層建立量值
+
+量值建立器可讓您依商務客戶建立量值，並選擇是否使用階層資訊。 階層資訊可用來彙總整個客戶及其相關的所有子客戶中的量值計算。 例如，您可以建立量值，像是由階層定義的每個商務客戶群組的總收入。 如需詳細資訊，請見 [定義和管理量值](measures.md)。
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>根據商務客戶及其階層建立客戶細分
+
+客戶細分建立器可讓您建立商務客戶的客戶細分，並可選擇客戶細分中是否每個客戶都包括連絡人資訊。 如果您已設定客戶階層，您可以在客戶細分建立時使用客戶階層資訊。 如需詳細資訊，請參閱[建立新客戶細分](segment-builder.md#create-a-new-segment)。
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>利用流失趨勢的深入見解來保留您的商務客戶
+
+客戶流失預測模型現在也支援商務客戶。 您可以評估不只是對客戶造成的流失風險，而不只是客戶，也包括客戶和購買產品或服務類別的組合。 這項新增功能可協助瞭解您的客戶是否很有可能停止大部分的購買或只停止特定類別的貨物或服務。 為進一步協助您使用此 AI 模型，這項功能也會列出客戶可能發生改動的原因。 如需詳細資訊，請參閱 [預測交易流失 (預覽版) ](predict-transactional-churn.md)。
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>在客戶檢視表中查看商務客戶連絡人
+
+如果商務客戶對應至相關的客戶，則 Customer Insights 應用程式會在客戶詳細資料檢視表中顯示這些相關連絡人。 如需詳細資訊，請參閱[客戶個人資料](customer-profiles.md)。
+
+
+## <a name="september-2021-updates"></a>2021 年 9 月更新
+
+2021 年 9 月更新內容包括新功能、效能升級和偵錯。
+
+### <a name="activities"></a>活動
+
+- **活動時間表改善** 我們已經延伸客戶設定檔上的活動時間表篩選條件。 此外您可以使用新盤形篩選條件依活動類型和日期篩選。 日期可使用不同條件篩選。 如需詳細資訊，請參閱[在客戶設定檔上查看活動時間表](activities.md#view-activity-timelines-on-customer-profiles)。
+
+### <a name="relationships"></a>關係
+
+- **多重跳接式關聯支援** 組態活動和定義實體之間的關聯時，請使用多重跳接式關聯。 多重跳接式關聯使用中間實體連接兩個實體。 組態活動時，您可以使用多重跳接式關聯將活動實體連接到中間實體，然後客戶實體。 您可以結合多重跳接式關聯與多重路徑關聯。 如需詳細資訊，請參閱[多重跳接式關聯](relationships.md#multi-hop-relationship)。
+
+- **多重路徑關聯支援** 組態活動和定義實體之間的關聯時，請使用多重跳徑關聯。 多重路徑關聯將來源實體與一個以上的實體產生關聯。 組態活動時，您可以使用多重路徑關聯將活動實體連接到一個以上的客戶實體。 您可以結合多重路徑關聯與多重跳接式關聯。 如需詳細資訊，請參閱[多重路徑關聯](relationships.md#multi-path-relationship)。
+
+## <a name="august-2021-updates"></a>2021 年 8 月更新
+
+2021 年 7 月及 8 月的更新包含新功能、效能升級和 BUG 修正。
+
+### <a name="extensibility"></a>擴充性
+
+- **將客戶細分匯出至 Klaviyo** 我們已擴充 [匯出目標，加入了Klaviyo](export-klaviyo.md)。 您在可以匯出客戶細分來建立行銷活動、執行電子郵件行銷，並且搭配 Klaviyo 使用特定客戶群組。 
+
 
 ## <a name="june-2021-updates"></a>2021 年 6 月更新
 
@@ -46,7 +170,7 @@ ms.locfileid: "6692416"
 ### <a name="ux-updates"></a>UX 更新 
 
 - **全新並增強的客戶頁面與個人資料詳細資料頁面** 我們重新設計了客戶頁面及個人資料詳細資料頁面，以改善使用者體驗和增加效能。 這些變更讓您可以您查看、排序、搜尋及篩選客戶。 篩選現在表示在 URL 中，可流暢地與其他使用者共用搜尋結果。 搜尋結果也可以儲存為客戶細分。    
-  客戶個人資料的詳細資料頁面現在會把資料分組在不同小節中 (如人口統計資料、識別碼及其他配置個人資料屬性)中，來改善可讀性。 個人資料詳細資料頁面上的其他區段現在更具互動性。 例如，活動區段可讓您篩選和排序。
+  客戶個人資料的詳細資料頁面現在會把資料分組在不同小節中 (如人口統計資料、識別碼及其他配置個人資料屬性)中，來改善可讀性。 個人資料詳細資料頁面上的其他區段現在更具互動性。 例如，活動分段允許篩選和排序。
 
 
 ## <a name="may-2021-updates"></a>2021 年 5 月更新
@@ -143,7 +267,7 @@ ms.locfileid: "6692416"
 - **將客戶細分匯出至 Constant Contact** 我們已擴展了匯出目的地，現在包括 Constant Contact。 您現在可以從 Customer Insights 將客戶細分匯出至 Constant Contact 清單，並用來當作行銷廣告活動的基準。   
    如需詳細資訊，請參閱[匯出資料至 Constant Contact](export-constant-contact.md)。
 
-- **將客戶細分匯出至 RollWorks** 我們已擴展了匯出目的地，現在包括 RollWorks。 您現在可以從 Customer Insights 將客戶細分匯出至 RollWorks 對象，並用來當作 B2B 廣告的基準。    
+- **將客戶細分匯出至 RollWorks** 我們已擴展了匯出目的地，現在包括 RollWorks。 您現在可以從 Customer Insights 匯出區段到 RollWorks 對象，並將它們用做您刊登 B 到 B 廣告的基準線。    
    如需詳細資訊，請參閱[匯出資料至 RollWorks](export-rollworks.md)。
 
 - **將客戶細分匯出至 Snapchat** 我們已擴展了匯出目的地，現在包括 Snapchat。 您現在可以從 Customer Insights 將客戶細分匯出至 Snapchat 對象，並用來當作廣告的基準。     

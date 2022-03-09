@@ -3,18 +3,20 @@ title: 即時資料內嵌和限制
 description: 關於對象見解中即時能力的一般資訊。
 ms.date: 10/27/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: zh-HK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035304"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355502"
 ---
 # <a name="real-time-data-ingestion-preview"></a>即時資料擷取 (預覽)
 
